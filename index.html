@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid black; margin: 20px auto; display: block; }
+        button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>PDF Viewer</h1>
+    <button onclick="prevPage()">⏪ 前のページ</button>
+    <button onclick="nextPage()">次のページ ⏩</button>
+    <button onclick="zoomIn()">🔍 拡大</button>
+    <button onclick="zoomOut()">🔍 縮小</button>
+    <canvas id="pdf-canvas"></canvas>
+
+    <script>
+        const url = "https://drive.google.com/uc?export=download&id=1lI1WBPz_cvgMVzma0BYvZLr-n4xDfYYv"
+        ; // ← ここにPDFのURLを入れる！
+        let
